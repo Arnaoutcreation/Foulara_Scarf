@@ -3,578 +3,361 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#64163d">
-<meta name="description" content="FOULARA SCARF - أناقة الخمر والحجابات">
-<title>FOULARA SCARF</title>
+<meta name="description" content="FOULARA SCARF - أناقة الخُمُر والحجابات">
+<title>FOULARA SCARF | أناقتك تبدأ من هنا</title>
 
 <style>
 :root {
   --wine: #64163d;
-  --pink: #d93b7b;
-  --gold: #c8a66a;
-  --cream: #fffaf6;
-  --ink: #21151c;
+  --wine-dark: #421027;
+  --beige: #f7f0e7;
+  --gold: #c5a36b;
+  --text: #33252b;
+  --white: #fff;
 }
 
-* { box-sizing: border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 html { scroll-behavior: smooth; }
 
 body {
-  margin: 0;
-  background: var(--cream);
-  color: var(--ink);
   font-family: Tahoma, Arial, sans-serif;
+  background: var(--beige);
+  color: var(--text);
   line-height: 1.8;
 }
 
-a { text-decoration: none; color: inherit; }
-
-.wrap {
-  width: min(1160px, 92%);
-  margin: auto;
-}
-
-.topline {
-  height: 5px;
-  background: linear-gradient(90deg,var(--gold),var(--pink),var(--wine));
-}
-
 header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: rgba(255,250,246,.96);
-  border-bottom: 1px solid #eadde3;
-}
-
-.nav {
-  min-height: 82px;
+  background: var(--wine);
+  color: white;
+  padding: 18px 6%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .brand img {
-  width: 105px;
+  width: 65px;
   height: 65px;
   object-fit: contain;
 }
 
-.brand span {
-  color: var(--wine);
-  font-weight: bold;
-  direction: ltr;
+.brand h1 {
+  font-size: 22px;
+  letter-spacing: 1px;
 }
 
-.links {
+nav {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
   font-size: 14px;
 }
 
-.links a:hover { color: var(--pink); }
-
-.btn {
-  display: inline-block;
-  background: var(--wine);
-  color: white;
-  padding: 11px 23px;
-  border-radius: 30px;
-  transition: .3s;
-}
-
-.btn:hover {
-  background: var(--pink);
-  transform: translateY(-2px);
-}
-
-.btn-outline {
-  background: transparent;
-  color: var(--wine);
-  border: 1px solid var(--wine);
-}
+nav a:hover { color: var(--gold); }
 
 .hero {
-  padding: 65px 0;
-  background:
-    radial-gradient(ellipse at 10% 20%,#f7dbe6,transparent 35%),
-    linear-gradient(135deg,#fffaf6,#f8edf0);
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  min-height: 520px;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 70px 20px;
+  background:
+    linear-gradient(135deg, rgba(66,16,39,.94),
+    rgba(100,22,61,.82));
+  color: white;
 }
 
-.hero-copy { text-align: right; }
+.hero-content { max-width: 750px; }
 
-.eyebrow {
-  color: var(--wine);
-  font-weight: bold;
+.hero img {
+  width: 145px;
+  height: 145px;
+  object-fit: contain;
+  margin-bottom: 15px;
 }
 
-h1 {
-  color: var(--wine);
-  font-family: Georgia,serif;
-  direction: ltr;
-  font-size: clamp(38px,6vw,70px);
-  line-height: 1.2;
-}
-
-h1 small {
-  display: block;
-  direction: rtl;
-  font-family: Tahoma;
-  font-size: 22px;
-  color: var(--ink);
-  margin-top: 15px;
+.hero h2 {
+  font-size: clamp(30px, 6vw, 48px);
+  color: #f4dcb5;
+  margin-bottom: 12px;
 }
 
 .hero p {
-  color: #766a70;
-  font-size: 17px;
-  margin: 22px 0;
+  font-size: 18px;
+  margin-bottom: 28px;
 }
 
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.hero-art {
-  display: grid;
-  place-items: center;
-}
-
-.halo {
-  width: min(390px,90%);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: linear-gradient(145deg,#f6dce6,#fff9f2,#e8d4bd);
-  border: 1px solid #c8a66a88;
-  display: grid;
-  place-items: center;
-  box-shadow: 0 25px 60px #64163d18;
-}
-
-.hero-logo {
-  width: 94%;
-  height: 85%;
-  object-fit: contain;
-}
-
-.trust {
-  background: white;
-  padding: 20px;
-  text-align: center;
-  color: #725b67;
-}
-
-.trust span { margin: 12px; }
-
-section { padding: 70px 0; }
-
-.section-head {
-  text-align: center;
-  margin-bottom: 38px;
-}
-
-.kicker {
-  color: var(--pink);
-  font-size: 13px;
+.main-btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--wine-dark);
+  padding: 12px 32px;
+  border-radius: 30px;
+  text-decoration: none;
   font-weight: bold;
-  letter-spacing: 2px;
-}
-
-.section-head h2,
-.about-copy h2 {
-  color: var(--wine);
-  font-family: Georgia,serif;
-  font-size: 36px;
-}
-
-.section-head p { color: #766a70; }
-
-.categories {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 20px;
-}
-
-.category {
-  min-height: 260px;
-  border-radius: 22px;
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  background: linear-gradient(145deg,#f6e1e9,#fffaf6);
-  border: 1px solid #eddde4;
-  box-shadow: 0 12px 30px #5a18300a;
   transition: .3s;
 }
 
-.category:hover {
-  transform: translateY(-5px);
+.main-btn:hover {
+  background: white;
+  transform: translateY(-3px);
 }
 
-.category:nth-child(2) {
-  background: linear-gradient(145deg,#eadbc9,#fffaf6);
+section {
+  padding: 65px 7%;
 }
 
-.category:nth-child(3) {
-  background: linear-gradient(145deg,#ead9e3,#fffaf6);
-}
-
-.category h3 {
-  color: var(--wine);
-  font-size: 24px;
-  margin: 0;
-}
-
-.category p { color: #685761; }
-
-.category a {
-  color: var(--wine);
-  font-weight: bold;
-}
-
-.about { background: white; }
-
-.about-grid {
-  display: grid;
-  grid-template-columns: .9fr 1.1fr;
-  gap: 50px;
-  align-items: center;
-}
-
-.about-mark {
-  min-height: 300px;
-  background: linear-gradient(145deg,#f5e0e8,#fff8f2);
-  border-radius: 25px;
-  display: grid;
-  place-items: center;
-}
-
-.about-mark img {
-  width: 85%;
-  max-width: 390px;
-  object-fit: contain;
-}
-
-.about-copy p { color: #766a70; }
-
-.features {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-top: 20px;
-}
-
-.feature {
-  padding: 15px;
-  background: #fff9f6;
-  border: 1px solid #eadde3;
-  border-radius: 13px;
-}
-
-.feature b {
-  display: block;
-  color: var(--wine);
-}
-
-.social {
-  background: linear-gradient(135deg,#5a1437,#79214c);
-  color: white;
+.section-title {
   text-align: center;
+  color: var(--wine);
+  font-size: 29px;
+  margin-bottom: 12px;
 }
 
-.social h2 {
-  font-family: Georgia,serif;
-  font-size: 34px;
+.section-subtitle {
+  text-align: center;
+  margin-bottom: 35px;
+  color: #76636b;
 }
 
-.social p { color: #f0dce5; }
+.about {
+  text-align: center;
+  max-width: 850px;
+  margin: auto;
+  font-size: 17px;
+}
+
+.products {
+  background: #fffaf5;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 22px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.product {
+  background: white;
+  border-radius: 16px;
+  padding: 28px 18px;
+  text-align: center;
+  border: 1px solid #eadbc8;
+  transition: .3s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px #64163d15;
+}
+
+.product .symbol {
+  font-size: 43px;
+  margin-bottom: 12px;
+}
+
+.product h3 {
+  color: var(--wine);
+  font-size: 19px;
+}
+
+.contact {
+  text-align: center;
+  background: var(--wine);
+  color: white;
+}
+
+.contact .section-title { color: #f4dcb5; }
+
+.contact p { margin: 10px 0; }
 
 .socials {
   display: flex;
   justify-content: center;
-  gap: 12px;
+  align-items: center;
   flex-wrap: wrap;
+  gap: 14px;
+  margin: 30px auto;
 }
 
-.social-btn {
-  display: inline-flex;
+.social {
+  display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 12px 20px;
+  gap: 9px;
+  padding: 12px 19px;
   border-radius: 30px;
-  border: 1px solid #ffffff66;
-  background: #ffffff14;
-  color: white;
+  text-decoration: none;
+  background: white;
+  color: var(--wine);
+  font-weight: bold;
   transition: .3s;
 }
 
-.social-btn:hover {
-  background: white;
-  color: var(--wine);
+.social:hover {
+  background: var(--gold);
   transform: translateY(-3px);
 }
 
-.social-btn svg {
-  width: 20px;
-  height: 20px;
+.social svg {
+  width: 22px;
+  height: 22px;
   fill: currentColor;
 }
 
 footer {
-  background: #24151e;
-  color: #e9dce2;
-  padding: 22px;
+  background: var(--wine-dark);
+  color: #e8d7df;
   text-align: center;
+  padding: 20px;
   font-size: 13px;
 }
 
-@media(max-width:800px) {
-  .links { display: none; }
-
-  .hero-grid,
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-copy { text-align: center; }
-
-  .hero-actions { justify-content: center; }
-
-  .categories { grid-template-columns: 1fr; }
-
-  .hero-art { order: -1; }
-
-  .halo { width: 280px; }
-
-  section { padding: 50px 0; }
-}
-
-@media(max-width:430px) {
-  .brand img { width: 80px; }
-
-  .brand span { font-size: 12px; }
-
-  .features { grid-template-columns: 1fr; }
+@media(max-width:600px) {
+  header { justify-content: center; text-align: center; }
+  nav { justify-content: center; gap: 13px; }
+  .hero { min-height: 450px; }
+  section { padding: 48px 5%; }
 }
 </style>
 </head>
 
 <body>
 
-<div class="topline"></div>
-
 <header>
-  <div class="wrap nav">
-
-    <a class="brand" href="#home">
-      <img src="assets/foulara-logo.png" alt="Foulara Scarf">
-      <span>FOULARA SCARF</span>
-    </a>
-
-    <nav class="links">
-      <a href="#home">الرئيسية</a>
-      <a href="#collections">تشكيلاتنا</a>
-      <a href="#about">عن المحل</a>
-      <a href="#contact">تواصل معنا</a>
-    </nav>
-
-    <a class="btn" href="https://wa.me/213658478789">
-      اطلبي عبر واتساب
-    </a>
-
+  <div class="brand">
+    <img src="logo.png" alt="FOULARA SCARF Logo">
+    <h1>FOULARA SCARF</h1>
   </div>
+
+  <nav>
+    <a href="#home">الرئيسية</a>
+    <a href="#about">من نحن</a>
+    <a href="#products">منتجاتنا</a>
+    <a href="#contact">تواصل معنا</a>
+  </nav>
 </header>
 
 <main>
-
 <section class="hero" id="home">
-  <div class="wrap hero-grid">
-
-    <div class="hero-copy">
-      <span class="eyebrow">أناقة تليق بكِ</span>
-
-      <h1>
-        FOULARA SCARF
-        <small>لمسة من الأناقة… وتفاصيل تصنع الفرق</small>
-      </h1>
-
-      <p>
-        اكتشفي عالم الخُمُر والحجابات بلمسة أنثوية راقية،
-        اختيارات تجمع بين الجمال والراحة لترافقكِ في كل يوم.
-      </p>
-
-      <div class="hero-actions">
-        <a class="btn" href="#collections">اكتشفي تشكيلاتنا</a>
-        <a class="btn btn-outline" href="#contact">تواصلي معنا</a>
-      </div>
-    </div>
-
-    <div class="hero-art">
-      <div class="halo">
-        <img class="hero-logo"
-             src="assets/foulara-logo.png"
-             alt="شعار فولارا">
-      </div>
-    </div>
-
+  <div class="hero-content">
+    <img src="foulara-logo.png" alt="شعار المحل">
+    <h2>FOULARA SCARF</h2>
+    <p>أناقتكِ تبدأ من هنا... عالم من الخُمُر والحجابات بذوق راقٍ وأناقة مميزة.</p>
+    <a href="#products" class="main-btn">اكتشفي منتجاتنا</a>
   </div>
 </section>
 
-<div class="trust">
-  <div class="wrap">
-    <span>✦ اختيارات أنيقة</span>
-    <span>✦ راحة وأناقة</span>
-    <span>✦ تواصل سهل وسريع</span>
+<section id="about">
+  <h2 class="section-title">مرحبا بكِ في FOULARA SCARF</h2>
+  <p class="section-subtitle">الأناقة والاحتشام في مكان واحد</p>
+  <div class="about">
+    <p>
+      نرحب بكِ في عالم FOULARA SCARF،
+      حيث تجدين تشكيلة مميزة من الخُمُر والحجابات
+      التي تجمع بين الأناقة والراحة والجودة.
+      نسعى دائماً لاختيار ما يناسب ذوقكِ ويبرز جمال إطلالتكِ.
+    </p>
   </div>
-</div>
+</section>
 
-<section id="collections">
-  <div class="wrap">
+<section class="products" id="products">
+  <h2 class="section-title">اكتشفي عالمنا</h2>
+  <p class="section-subtitle">اختيارات أنيقة تناسب كل إطلالة</p>
 
-    <div class="section-head">
-      <span class="kicker">OUR COLLECTIONS</span>
-      <h2>تشكيلاتنا</h2>
-      <p>اختاري ما يعكس ذوقكِ ويمنح إطلالتكِ لمستها الخاصة.</p>
+  <div class="product-grid">
+    <div class="product">
+      <div class="symbol">🧕</div>
+      <h3>الخُمُر</h3>
+      <p>أناقة واحتشام وراحة في كل يوم.</p>
     </div>
 
-    <div class="categories">
+    <div class="product">
+      <div class="symbol">✨</div>
+      <h3>الحجابات</h3>
+      <p>تشكيلات متنوعة وألوان جذابة.</p>
+    </div>
 
-      <article class="category">
-        <h3>الخُمُر</h3>
-        <p>أناقة محتشمة وانسيابية مريحة</p>
-        <a href="#contact">استفسري عن التشكيلة ←</a>
-      </article>
-
-      <article class="category">
-        <h3>الحجابات</h3>
-        <p>ألوان وتفاصيل تناسب كل إطلالة</p>
-        <a href="#contact">استفسري عن التشكيلة ←</a>
-      </article>
-
-      <article class="category">
-        <h3>اختيارات مميزة</h3>
-        <p>اكتشفي القطع التي تحبينها</p>
-        <a href="#contact">تواصلي معنا ←</a>
-      </article>
-
+    <div class="product">
+      <div class="symbol">🌸</div>
+      <h3>إكسسوارات</h3>
+      <p>لمسات جميلة تكمل أناقتكِ.</p>
     </div>
   </div>
 </section>
 
-<section class="about" id="about">
-  <div class="wrap about-grid">
+<section class="contact" id="contact">
+  <h2 class="section-title">تابعينا وتواصلي معنا</h2>
+  <p>كوني قريبة منا واكتشفي جديد FOULARA SCARF</p>
 
-    <div class="about-mark">
-      <img src="assets/foulara-logo.png" alt="Foulara Scarf">
-    </div>
+  <div class="socials">
 
-    <div class="about-copy">
-      <span class="kicker">ABOUT FOULARA</span>
-      <h2>جمالكِ في بساطتكِ</h2>
+    <!-- Facebook -->
+    <a class="social" href="ضع_رابط_فيسبوك_هنا"
+       target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24">
+        <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.6V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.3v3h2.7v8z"/>
+      </svg>
+      Facebook
+    </a>
 
-      <p>
-        في FOULARA SCARF نؤمن أن الأناقة تبدأ من التفاصيل.
-        نحرص على تقديم اختيارات من الخُمُر والحجابات
-        تجمع بين الذوق الرفيع والراحة.
-      </p>
+    <!-- Instagram -->
+    <a class="social" href="ضع_رابط_انستغرام_هنا"
+       target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24">
+        <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.5-3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/>
+      </svg>
+      Instagram
+    </a>
 
-      <p>
-        تابعينا على صفحاتنا الاجتماعية لاكتشاف الجديد
-        والتعرّف على التشكيلات المتوفرة.
-      </p>
+    <!-- TikTok -->
+    <a class="social" href="https://www.tiktok.com/@foulara.scarf"
+       target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24">
+        <path d="M19.6 7.1a6.3 6.3 0 0 1-4-3.7V3h-3.4v12.1a2.8 2.8 0 1 1-2.8-2.8c.3 0 .6 0 .9.1V9a6.2 6.2 0 1 0 5.3 6.1V9a9.7 9.7 0 0 0 5 1.4V7.1z"/>
+      </svg>
+      TikTok
+    </a>
 
-      <div class="features">
-        <div class="feature">
-          <b>ذوق راقٍ</b>
-          تفاصيل أنثوية أنيقة
-        </div>
-
-        <div class="feature">
-          <b>راحة يومية</b>
-          اختيارات تناسب يومكِ
-        </div>
-      </div>
-    </div>
+    <!-- WhatsApp -->
+    <a class="social" href="https://wa.me/213658478789"
+       target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.1-.3.2-.5.1-1.4-.7-2.3-1.3-3.2-2.9-.2-.3.2-.3.6-1 .1-.1 0-.3 0-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2 1 2.4c.1.2 1.6 2.5 3.9 3.4 1.4.6 1.9.6 2.5.5.4-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.3-.2-.5-.3z"/>
+      </svg>
+      WhatsApp
+    </a>
 
   </div>
 </section>
-
-<section class="social" id="contact">
-  <div class="wrap">
-
-    <span class="kicker" style="color:#f4c6d9">
-      STAY CONNECTED
-    </span>
-
-    <h2>تابعينا وكوني قريبة من جديدنا</h2>
-    <p>يسعدنا تواصلكِ معنا عبر صفحاتنا أو واتساب.</p>
-
-    <div class="socials">
-
-      <a class="social-btn"
-         href="https://www.facebook.com/search/top?q=Foulara%20Scarf"
-         target="_blank">
-        <svg viewBox="0 0 24 24">
-          <path d="M13.5 21v-8h2.7l.4-3.1h-3.1V8c0-.9.3-1.5 1.6-1.5h1.7V3.7c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5v1.8H7V13h2.8v8z"/>
-        </svg>
-        Facebook
-      </a>
-
-      <a class="social-btn"
-         href="https://www.instagram.com/foulara.scarf/"
-         target="_blank">
-        <svg viewBox="0 0 24 24">
-          <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4zm9.8 1.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
-        </svg>
-        Instagram
-      </a>
-
-      <a class="social-btn"
-         href="https://www.tiktok.com/@foulara.scarf"
-         target="_blank">
-        TikTok
-      </a>
-
-      <a class="social-btn"
-         href="https://wa.me/213658478789"
-         target="_blank">
-        WhatsApp
-      </a>
-
-    </div>
-  </div>
-</section>
-
 </main>
 
 <footer>
-  © <span id="year"></span>
-  FOULARA SCARF — جميع الحقوق محفوظة
+  <p>© 2026 FOULARA SCARF - جميع الحقوق محفوظة</p>
+  <p>Elegance • Modesty • Beauty</p>
 </footer>
-
-<script>
-document.getElementById("year").textContent =
-  new Date().getFullYear();
-</script>
 
 </body>
 </html>
