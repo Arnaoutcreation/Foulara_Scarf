@@ -60,18 +60,19 @@ body::after {
 
 /* LOGO */
 
+
 .logo {
-    width: 210px;
-    height: 210px;
-    max-width: 72vw;
+    width: 225px;
+    height: 225px;
+    max-width: 75vw;
     margin: 0 auto 17px;
-    padding: 13px;
+    padding: 5px;
     background: linear-gradient(145deg, #fffaf1, #e8d5bb);
-    border: 2px solid #d6b477;
-    border-radius: 25px;
+    border: 1.5px solid #d6b477;
+    border-radius: 19px;
     box-shadow:
-        0 12px 30px rgba(0,0,0,.35),
-        inset 0 2px 5px rgba(255,255,255,.8);
+        0 10px 25px rgba(0,0,0,.32),
+        inset 0 1px 3px rgba(255,255,255,.8);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,6 +83,15 @@ body::after {
     height: 100%;
     object-fit: contain;
 }
+
+@media (max-width: 600px) {
+    .logo {
+        width: 205px;
+        height: 205px;
+        padding: 5px;
+    }
+}
+
 
 /* TITLE */
 
