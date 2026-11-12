@@ -2,489 +2,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#260817">
-
-<title>FOULARA SCARF</title>
-
-<style>
-:root {
-  --wine: #260817;
-  --wine2: #500d2a;
-  --pink: #b51b50;
-  --gold: #e6c17b;
-  --cream: #fff4dc;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  padding: 35px 15px;
-  display: flex;
-  justify-content: center;
-  font-family: Georgia, serif;
-  color: var(--cream);
-
-  background:
-    radial-gradient(
-      ellipse at 50% 20%,
-      #701632 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      ellipse at 5% 80%,
-      #511027 0%,
-      transparent 35%
-    ),
-    linear-gradient(
-      145deg,
-      #16030b,
-      #390b20 55%,
-      #19040d
-    );
-
-  overflow-x: hidden;
-  position: relative;
-}
-
-/* GOLDEN FLOWERS */
-
-body::before,
-body::after {
-  position: fixed;
-  content: "✿";
-  color: #d9a84e;
-  font-size: 130px;
-  opacity: .28;
-  pointer-events: none;
-  z-index: 0;
-  text-shadow: 0 0 25px #d9a84e55;
-}
-
-body::before {
-  top: 10px;
-  left: -45px;
-  transform: rotate(-25deg);
-}
-
-body::after {
-  bottom: 10px;
-  right: -40px;
-  transform: rotate(25deg);
-}
-
-/* MAIN CONTAINER */
-
-.container {
-  width: 100%;
-  max-width: 480px;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  padding: 15px 10px;
-}
-
-/* TOP GOLD LINE */
-
-.top-line {
-  width: 85%;
-  height: 1px;
-  margin: 0 auto 25px;
-
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--gold),
-    transparent
-  );
-}
-
-/* LOGO FRAME */
-
-.logo {
-  width: 190px;
-  max-width: 65%;
-  margin: 0 auto 25px;
-  padding: 16px;
-
-  background: linear-gradient(
-    145deg,
-    #fff8ed,
-    #e8d5bb
-  );
-
-  border: 1.5px solid var(--gold);
-  border-radius: 22px;
-
-  box-shadow:
-    0 10px 30px #0008,
-    0 0 18px #d9b87535,
-    inset 0 0 12px #ffffffaa;
-}
-
-.logo img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
-}
-
-/* BRAND NAME */
-
-.brand {
-  color: var(--gold);
-  font-size: clamp(30px, 8vw, 43px);
-  letter-spacing: 4px;
-  margin: 15px 0 8px;
-
-  text-shadow:
-    0 3px 15px #0008,
-    0 0 15px #d9b87530;
-}
-
-/* SLOGAN */
-
-.slogan {
-  color: #f1cd89;
-  font-size: 23px;
-  font-style: italic;
-  margin-bottom: 25px;
-}
-
-/* ORNAMENT */
-
-.ornament {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-
-  color: var(--gold);
-  font-size: 28px;
-  margin: 20px 0 30px;
-}
-
-.ornament::before,
-.ornament::after {
-  content: "";
-  height: 1px;
-  flex: 1;
-  max-width: 130px;
-
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--gold)
-  );
-}
-
-.ornament::after {
-  transform: rotate(180deg);
-}
-
-/* FOLLOW TEXT */
-
-.follow {
-  color: var(--gold);
-  font-family: Arial, sans-serif;
-  font-size: 13px;
-  letter-spacing: 6px;
-  margin-bottom: 25px;
-}
-
-/* SOCIAL LINKS */
-
-.links {
-  display: flex;
-  flex-direction: column;
-  gap: 17px;
-  max-width: 370px;
-  margin: auto;
-}
-
-/* SOCIAL BUTTON DESIGN */
-
-.social {
-  min-height: 75px;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 20px;
-
-  padding: 10px 22px;
-
-  border: 1.5px solid var(--gold);
-  border-radius: 50px;
-
-  color: white;
-  text-decoration: none;
-
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  letter-spacing: 2px;
-
-  background: linear-gradient(
-    110deg,
-    #6b1536,
-    #2b0717 65%,
-    #541027
-  );
-
-  box-shadow:
-    0 5px 20px #0008,
-    inset 0 1px 8px #ffffff15;
-
-  transition: .3s ease;
-}
-
-.social:hover {
-  transform: translateY(-5px);
-
-  box-shadow:
-    0 8px 28px #000a,
-    0 0 15px #d9b87555;
-
-  background: linear-gradient(
-    110deg,
-    #8c2048,
-    #400d25
-  );
-}
-
-.social svg {
-  width: 39px;
-  height: 39px;
-  flex-shrink: 0;
-  fill: currentColor;
-}
-
-.social span {
-  flex: 1;
-  text-align: center;
-}
-
-/* GOLD ARROW */
-
-.arrow {
-  color: var(--gold);
-  font-size: 32px;
-  font-weight: normal;
-}
-
-/* SOCIAL ICON COLORS */
-
-.facebook svg {
-  color: #82aaff;
-}
-
-.instagram svg {
-  color: #ff85bd;
-}
-
-.tiktok svg {
-  color: white;
-}
-
-.whatsapp svg {
-  color: #72dfa0;
-}
-
-/* FOOTER */
-
-.footer {
-  margin-top: 45px;
-
-  color: var(--gold);
-
-  font-family: Arial, sans-serif;
-  font-size: 11px;
-  letter-spacing: 2px;
-  line-height: 2;
-}
-
-.footer .copyright {
-  color: #d4b6c1;
-  font-size: 10px;
-}
-
-.bottom-ornament {
-  color: var(--gold);
-  margin-top: 22px;
-  font-size: 25px;
-}
-
-/* MOBILE RESPONSIVE */
-
-@media(max-width: 400px) {
-
-  body {
-    padding: 20px 12px;
-  }
-
-  .brand {
-    letter-spacing: 2px;
-    font-size: 28px;
-  }
-
-  .slogan {
-    font-size: 18px;
-  }
-
-  .logo {
-    width: 165px;
-  }
-
-  .social {
-    min-height: 62px;
-    padding: 9px 16px;
-    gap: 13px;
-    font-size: 14px;
-  }
-
-  .social svg {
-    width: 34px;
-    height: 34px;
-  }
-
-  .follow {
-    letter-spacing: 4px;
-  }
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOULARA SCARF</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 35px 15px;
+            font-family: Georgia, serif;
+            text-align: center;
+            color: #fff8ed;
+            background:
+                radial-gradient(circle at 15% 15%, rgba(190, 100, 120, 0.22), transparent 30%),
+                radial-gradient(circle at 85% 80%, rgba(218, 174, 110, 0.15), transparent 30%),
+                linear-gradient(135deg, #4b1025, #741d3b, #3d0b20);
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before,
+        body::after {
+            content: "✿";
+            position: fixed;
+            color: rgba(232, 196, 135, 0.15);
+            font-size: 170px;
+            pointer-events: none;
+        }
+
+        body::before {
+            top: 5%;
+            left: -35px;
+        }
+
+        body::after {
+            bottom: 3%;
+            right: -35px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 430px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* إطار اللوغو */
+        .logo {
+            width: 155px;
+            height: 155px;
+            max-width: 60vw;
+            margin: 0 auto 20px;
+            padding: 12px;
+            background: linear-gradient(145deg, #fff8ed, #e8d5bb);
+            border: 2px solid #d6b477;
+            border-radius: 20px;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        h1 {
+            font-size: 29px;
+            letter-spacing: 4px;
+            color: #f1d5a5;
+            margin-bottom: 7px;
+        }
+
+        /* الكتابة تحت اللوغو */
+        .slogan {
+            font-size: 14px;
+            letter-spacing: 1px;
+            color: #f8e8d2;
+            margin-bottom: 15px;
+        }
+
+        .decoration {
+            color: #d8b77d;
+            font-size: 19px;
+            margin-bottom: 15px;
+        }
+
+        .follow {
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 3px;
+            color: #e8c487;
+            margin-bottom: 20px;
+        }
+
+        /* أزرار التواصل */
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
+        }
+
+        .social {
+            min-height: 54px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 10px 18px;
+            border: 1px solid rgba(232, 196, 135, 0.75);
+            border-radius: 15px;
+            background: rgba(255, 248, 237, 0.09);
+            color: #fff8ed;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .social:hover {
+            background: #e8c487;
+            color: #4b1025;
+            transform: translateY(-3px);
+            box-shadow: 0 7px 18px rgba(0, 0, 0, 0.2);
+        }
+
+        .social svg {
+            width: 23px;
+            height: 23px;
+            fill: currentColor;
+            flex-shrink: 0;
+        }
+
+        footer {
+            margin-top: 28px;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 1px;
+            color: rgba(255, 248, 237, 0.65);
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 25px;
+                letter-spacing: 3px;
+            }
+
+            .logo {
+                width: 140px;
+                height: 140px;
+            }
+
+            .social {
+                min-height: 50px;
+                font-size: 12px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<main class="container">
+    <main class="container">
 
-  <div class="top-line"></div>
+        <div class="logo">
+            <img src="FOULARA_logo.png" alt="FOULARA SCARF Logo">
+        </div>
 
-  <!-- ORIGINAL LOGO -->
+        <h1>FOULARA SCARF</h1>
 
-  <div class="logo">
-    <img
-      src="FOULARA_logo.png"
-      alt="Foulara Scarf Official Logo"
-    >
-  </div>
+        <p class="slogan">Elegance in Every Detail</p>
 
-  <!-- BRAND -->
+        <div class="decoration">✧ ❀ ✧</div>
 
-  <h1 class="brand">
-    FOULARA SCARF
-  </h1>
+        <p class="follow">CONNECT WITH US</p>
 
-  <div class="slogan">
-    Elegance in Every Detail
-  </div>
+        <div class="social-links">
 
-  <!-- GOLD ORNAMENT -->
+            <a class="social"
+               href="https://www.facebook.com/share/1CsjUfX7vs/"
+               target="_blank"
+               rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24">
+                    <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V4a22 22 0 0 0-2.5-.1c-2.5 0-4.2 1.5-4.2 4.3V10H7.3v3h2.8v8z"/>
+                </svg>
+                <span>FACEBOOK</span>
+            </a>
 
-  <div class="ornament">
-    ✧
-  </div>
+            <a class="social"
+               href="https://www.instagram.com/foulara.scarf?xtok=MXh4bDlxajBqaWNkaQ=="
+               target="_blank"
+               rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24">
+                    <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.5-3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/>
+                </svg>
+                <span>INSTAGRAM</span>
+            </a>
 
-  <div class="follow">
-    CONNECT WITH US
-  </div>
+            <a class="social"
+               href="https://www.tiktok.com/@foulara.scarf"
+               target="_blank"
+               rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24">
+                    <path d="M19.6 7.2a6.7 6.7 0 0 1-4.1-1.4v8.1a6.1 6.1 0 1 1-6.1-6.1c.4 0 .8 0 1.2.1v3.4a2.8 2.8 0 1 0 1.5 2.5V2h3.4c.2 2 1.8 3.6 4.1 3.8z"/>
+                </svg>
+                <span>TIKTOK</span>
+            </a>
 
-  <!-- SOCIAL MEDIA -->
+            <a class="social"
+               href="https://wa.me/213658478789"
+               target="_blank"
+               rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8.9-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.3.1-.5l.4-.4c.1-.1.2-.2.2-.4.1-.1 0-.3 0-.4-.1-.1-.5-1.3-.7-1.8-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.5c.1.2 1.6 2.5 3.9 3.4.5.2.9.3 1.2.4.5.2 1 .1 1.3.1.4-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.3-.2-.5-.3z"/>
+                </svg>
+                <span>WHATSAPP</span>
+            </a>
 
-  <div class="links">
+        </div>
 
-    <!-- FACEBOOK -->
+        <footer>
+            © 2026 FOULARA SCARF — ALL RIGHTS RESERVED
+        </footer>
 
-    <a class="social facebook"
-       href="https://www.facebook.com/share/1CsjUfX7vs/"
-       target="_blank"
-       rel="noopener noreferrer">
-
-      <svg viewBox="0 0 24 24">
-        <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.6V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.3v3h2.7v8z"/>
-      </svg>
-
-      <span>FACEBOOK</span>
-      <b class="arrow">›</b>
-
-    </a>
-
-    <!-- INSTAGRAM -->
-
-    <a class="social instagram"
-       href="https://www.instagram.com/foulara.scarf?xtok=MXh4bDlxajBqaWNkaQ=="
-       target="_blank"
-       rel="noopener noreferrer">
-
-      <svg viewBox="0 0 24 24">
-        <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.5-3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/>
-      </svg>
-
-      <span>INSTAGRAM</span>
-      <b class="arrow">›</b>
-
-    </a>
-
-    <!-- TIKTOK -->
-
-    <a class="social tiktok"
-       href="https://www.tiktok.com/@foulara.scarf"
-       target="_blank"
-       rel="noopener noreferrer">
-
-      <svg viewBox="0 0 24 24">
-        <path d="M19.6 7.1a6.3 6.3 0 0 1-4-3.7V3h-3.4v12.1a2.8 2.8 0 1 1-2.8-2.8c.3 0 .6 0 .9.1V9a6.2 6.2 0 1 0 5.3 6.1V9a9.7 9.7 0 0 0 5 1.4V7.1z"/>
-      </svg>
-
-      <span>TIKTOK</span>
-      <b class="arrow">›</b>
-
-    </a>
-
-    <!-- WHATSAPP -->
-
-    <a class="social whatsapp"
-       href="https://wa.me/213658478789"
-       target="_blank"
-       rel="noopener noreferrer">
-
-      <svg viewBox="0 0 24 24">
-        <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.1-.3.2-.5.1-1.4-.7-2.3-1.3-3.2-2.9-.2-.3.2-.3.6-1 .1-.1 0-.3 0-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2 1 2.4c.1.2 1.6 2.5 3.9 3.4 1.4.6 1.9.6 2.5.5.4-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.3-.2-.5-.3z"/>
-      </svg>
-
-      <span>WHATSAPP</span>
-      <b class="arrow">›</b>
-
-    </a>
-
-  </div>
-
-  <!-- FOOTER -->
-
-  <div class="footer">
-
-    <span>FOULARA SCARF</span>
-    &nbsp; · &nbsp;
-    ELEGANCE & MODESTY
-
-    <div class="copyright">
-      © 2026 ALL RIGHTS RESERVED
-    </div>
-
-    <div class="bottom-ornament">
-      ✧ ───── ✧
-    </div>
-
-  </div>
-
-</main>
+    </main>
 
 </body>
 </html>
