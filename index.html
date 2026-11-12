@@ -10,95 +10,110 @@
 <style>
 :root {
   --wine: #260817;
-  --wine2: #421027;
-  --pink: #e60068;
-  --gold: #d9b875;
-  --cream: #fff8ed;
+  --wine2: #500d2a;
+  --pink: #b51b50;
+  --gold: #e6c17b;
+  --cream: #fff4dc;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: Georgia, 'Times New Roman', serif;
-  color: var(--cream);
-  background:
-    radial-gradient(ellipse at 50% 15%, #67213f 0%, transparent 48%),
-    linear-gradient(145deg, #16040e, #351025 55%, #19050f);
+  padding: 35px 15px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 35px 16px;
+  font-family: Georgia, serif;
+  color: var(--cream);
+  background:
+    radial-gradient(ellipse at 50% 25%, #67132f 0%, transparent 55%),
+    radial-gradient(ellipse at 5% 80%, #511027 0%, transparent 35%),
+    linear-gradient(145deg, #16030b, #390b20 55%, #19040d);
   overflow-x: hidden;
+}
+
+/* Decorative golden corners */
+body::before,
+body::after {
+  position: fixed;
+  content: "✿";
+  color: #d9a84e;
+  font-size: 105px;
+  opacity: .32;
+  pointer-events: none;
+}
+
+body::before {
+  top: 15px;
+  left: -35px;
+  transform: rotate(-25deg);
+}
+
+body::after {
+  bottom: 10px;
+  right: -30px;
+  transform: rotate(25deg);
 }
 
 .container {
   width: 100%;
-  max-width: 470px;
+  max-width: 480px;
   text-align: center;
   position: relative;
   z-index: 1;
+  padding: 15px 10px;
 }
 
-.top-line {
-  width: 90px;
-  height: 2px;
-  background: var(--gold);
-  margin: 0 auto 28px;
+/* Logo */
+.logo {
+  width: 155px;
+  max-width: 48%;
+  margin: 0 auto 20px;
 }
 
-.logo-frame {
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  padding: 0;
-  box-shadow: none;
-  width: 190px;
-  max-width: 65%;
-  margin: 0 auto 18px;
-}
-
-.logo-frame img {
-  display: block;
+.logo img {
   width: 100%;
   height: auto;
-  object-fit: contain;
-  background: transparent;
+  display: block;
+  mix-blend-mode: multiply;
 }
 
+/* Brand */
 .brand {
-  font-size: 27px;
-  letter-spacing: 5px;
-  font-weight: bold;
-  color: var(--cream);
-  margin: 12px 0 8px;
+  color: var(--gold);
+  font-size: clamp(30px, 8vw, 43px);
+  letter-spacing: 4px;
+  margin: 15px 0 8px;
+  text-shadow: 0 3px 15px #0008;
 }
 
 .slogan {
-  font-size: 18px;
+  color: #f1cd89;
+  font-size: 21px;
   font-style: italic;
-  letter-spacing: 1.5px;
-  color: var(--gold);
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .ornament {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  margin: 25px 0;
+  gap: 15px;
   color: var(--gold);
-  font-size: 17px;
+  font-size: 28px;
+  margin: 20px 0 30px;
 }
 
 .ornament::before,
 .ornament::after {
   content: "";
   height: 1px;
-  width: 65px;
-  background: linear-gradient(90deg,transparent,var(--gold));
+  flex: 1;
+  max-width: 130px;
+  background: linear-gradient(90deg, transparent, var(--gold));
 }
 
 .ornament::after {
@@ -108,67 +123,99 @@ body {
 .follow {
   color: var(--gold);
   font-family: Arial, sans-serif;
-  font-size: 12px;
-  letter-spacing: 5px;
-  margin: 25px 0 20px;
+  font-size: 13px;
+  letter-spacing: 6px;
+  margin-bottom: 25px;
 }
 
+/* Social buttons */
 .links {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 17px;
+  max-width: 370px;
+  margin: auto;
 }
 
 .social {
+  min-height: 70px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 15px;
-  min-height: 62px;
-  border-radius: 12px;
-  text-decoration: none;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 10px 22px;
+  border: 1.5px solid var(--gold);
+  border-radius: 50px;
   color: white;
+  text-decoration: none;
   font-family: Arial, sans-serif;
   font-size: 16px;
   font-weight: bold;
-  letter-spacing: 1px;
-  border: 1px solid #ffffff30;
-  background: linear-gradient(110deg,#ffffff13,#ffffff05);
-  box-shadow: 0 5px 18px #0003;
+  letter-spacing: 2px;
+  background:
+    linear-gradient(110deg, #6b1536, #2b0717 65%, #541027);
+  box-shadow:
+    0 5px 20px #0008,
+    inset 0 1px 8px #ffffff15;
   transition: .3s ease;
 }
 
 .social:hover {
-  transform: translateY(-4px);
-  border-color: var(--gold);
-  background: #ffffff18;
-  box-shadow: 0 8px 25px #0006;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 28px #000a, 0 0 15px #d9b87555;
+  background: linear-gradient(110deg, #8c2048, #400d25);
 }
 
 .social svg {
-  width: 25px;
-  height: 25px;
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
   fill: currentColor;
 }
 
-.facebook { color: #82aaff; }
-.instagram { color: #ff85bd; }
-.tiktok { color: white; }
-.whatsapp { color: #72dfa0; }
+.social span {
+  flex: 1;
+  text-align: center;
+}
 
+.arrow {
+  color: var(--gold);
+  font-size: 28px;
+}
+
+.facebook svg { color: #82aaff; }
+.instagram svg { color: #ff85bd; }
+.tiktok svg { color: white; }
+.whatsapp svg { color: #72dfa0; }
+
+/* Footer */
 .footer {
-  margin-top: 38px;
+  margin-top: 45px;
+  color: var(--gold);
   font-family: Arial, sans-serif;
   font-size: 11px;
   letter-spacing: 2px;
-  color: #c7a8b6;
+  line-height: 2;
 }
 
-.footer span { color: var(--gold); }
+.footer .copyright {
+  color: #d4b6c1;
+  font-size: 10px;
+}
 
-@media(max-width:400px) {
-  .brand { font-size: 22px; }
-  .slogan { font-size: 16px; }
+.bottom-ornament {
+  color: var(--gold);
+  margin-top: 22px;
+  font-size: 25px;
+}
+
+/* Mobile */
+@media(max-width: 400px) {
+  body { padding: 20px 12px; }
+  .brand { letter-spacing: 2px; }
+  .slogan { font-size: 18px; }
+  .social { min-height: 62px; }
+  .follow { letter-spacing: 4px; }
 }
 </style>
 </head>
@@ -177,11 +224,9 @@ body {
 
 <main class="container">
 
-  <div class="top-line"></div>
-
-  <!-- OFFICIAL SHOP LOGO -->
-  <div class="logo-frame">
-    <img src="FOULARA_logo.png" alt="Foulara Scarf Official Logo">
+  <div class="logo">
+    <img src="FOULARA_logo_white_background.bmp"
+         alt="Foulara Scarf Logo">
   </div>
 
   <h1 class="brand">FOULARA SCARF</h1>
@@ -199,55 +244,58 @@ body {
     <!-- FACEBOOK -->
     <a class="social facebook"
        href="https://www.facebook.com/share/1CsjUfX7vs/"
-       target="_blank" rel="noopener">
-
+       target="_blank" rel="noopener noreferrer">
       <svg viewBox="0 0 24 24">
         <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.6V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.3v3h2.7v8z"/>
       </svg>
-      FACEBOOK
+      <span>FACEBOOK</span>
+      <b class="arrow">›</b>
     </a>
 
     <!-- INSTAGRAM -->
     <a class="social instagram"
        href="https://www.instagram.com/foulara.scarf?xtok=MXh4bDlxajBqaWNkaQ=="
-       target="_blank" rel="noopener">
-
+       target="_blank" rel="noopener noreferrer">
       <svg viewBox="0 0 24 24">
         <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.5-3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/>
       </svg>
-      INSTAGRAM
+      <span>INSTAGRAM</span>
+      <b class="arrow">›</b>
     </a>
 
     <!-- TIKTOK -->
     <a class="social tiktok"
        href="https://www.tiktok.com/@foulara.scarf"
-       target="_blank" rel="noopener">
-
+       target="_blank" rel="noopener noreferrer">
       <svg viewBox="0 0 24 24">
         <path d="M19.6 7.1a6.3 6.3 0 0 1-4-3.7V3h-3.4v12.1a2.8 2.8 0 1 1-2.8-2.8c.3 0 .6 0 .9.1V9a6.2 6.2 0 1 0 5.3 6.1V9a9.7 9.7 0 0 0 5 1.4V7.1z"/>
       </svg>
-      TIKTOK
+      <span>TIKTOK</span>
+      <b class="arrow">›</b>
     </a>
 
     <!-- WHATSAPP -->
     <a class="social whatsapp"
        href="https://wa.me/213658478789"
-       target="_blank" rel="noopener">
-
+       target="_blank" rel="noopener noreferrer">
       <svg viewBox="0 0 24 24">
         <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.1-.3.2-.5.1-1.4-.7-2.3-1.3-3.2-2.9-.2-.3.2-.3.6-1 .1-.1 0-.3 0-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2 1 2.4c.1.2 1.6 2.5 3.9 3.4 1.4.6 1.9.6 2.5.5.4-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.3-.2-.5-.3z"/>
       </svg>
-      WHATSAPP
+      <span>WHATSAPP</span>
+      <b class="arrow">›</b>
     </a>
 
   </div>
 
   <div class="footer">
-    <span>FOULARA SCARF</span> · ELEGANCE & MODESTY
-    <br><br>
-    © 2026 ALL RIGHTS RESERVED
+    FOULARA SCARF &nbsp; · &nbsp; ELEGANCE & MODESTY
+    <div class="copyright">
+      © 2026 ALL RIGHTS RESERVED
+    </div>
+    <div class="bottom-ornament">✧ ───── ✧</div>
   </div>
 
 </main>
+
 </body>
 </html>
